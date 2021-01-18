@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cvStep1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/white">
+
+    <!-- Code Layout -->
+    <LinearLayout
+        android:id="@+id/codeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:text="@string/label_code" />
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/spinnerCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:smsp_isSearchable="true"
+            app:smsp_hint="@string/spinner_title_code"/>
+    </LinearLayout>
+
+    <!-- Stop Type Layout -->
+    <LinearLayout
+        android:id="@+id/stopTypeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/codeLayout">
+
+        <TextView
+            android:id="@+id/tvStopType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_stop_type"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/etStopType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Programado"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <!-- Machine Layout -->
+        <LinearLayout
+            android:id="@+id/machineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/stopTypeLayout">
+                <TextView
+                    android:id="@+id/tvMachine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@string/label_machine" />
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinnerMachine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:smsp_isSearchable="true"
+                    app:smsp_hint="@string/spinner_title_machine" />
+        </LinearLayout>
+
+    <!-- Product Layout -->
+        <LinearLayout
+            android:id="@+id/productLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/machineLayout">
+                <TextView
+                    android:id="@+id/tvProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_product"
+                    android:textStyle="bold"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+
+                <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                    android:id="@+id/spinnerProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:smsp_isSearchable="true"
+                    app:smsp_hint="@string/spinner_title_product"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+        </LinearLayout>
+
+    <!-- Color Layout -->
+        <LinearLayout
+            android:id="@+id/colorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/productLayout">
+                <TextView
+                    android:id="@+id/tvColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_color"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+            <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                android:id="@+id/spinnerColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:smsp_isSearchable="true"
+                app:smsp_hint="@string/spinner_title_color"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+        </LinearLayout>
+
+        <!-- Meters Layout -->
+        <LinearLayout
+            android:id="@+id/metersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/colorLayout">
+                <TextView
+                    android:id="@+id/tvMeters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_meters"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+
+                <EditText
+                    android:id="@+id/etMeters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+        </LinearLayout>
+
+        <!-- Comments Layout -->
+        <LinearLayout
+            android:id="@+id/commentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/metersLayout">
+        <TextView
+            android:id="@+id/tvComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_comments"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:layout_below="@+id/commentsLayout">
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/MenuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:drawableEnd="@drawable/ic_navigate_next"
+            android:text="@string/btn_next" />
+        </LinearLayout>
+</RelativeLayout>

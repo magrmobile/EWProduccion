@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="3dp"
+    tools:context=".ui.MenuActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvStopId"
+            android:gravity="center_horizontal"
+            tools:text="Numero de Paro #7" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tvCodeDescription"
+            tools:text="0 - Maquina trabajando normal"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tvStopType"
+            tools:text="Programado"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tvMachine"
+            tools:text="Maquina 1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tvProduct"
+            tools:text="Producto 1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:id="@+id/tvColor"
+            tools:text="Color 1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvStopDateStart"
+            tools:text="Inicio el dia 12/12/2020"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvStopTimeStart"
+            tools:text="A las 3:00 PM"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvStopDateEnd"
+            tools:text="Inicio el dia 12/12/2020"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvStopTimeEnd"
+            tools:text="A las 3:00 PM"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvMeters"
+            tools:text="300 Mts. Producidos"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/tvComments"
+            tools:text="Comentario Adicional"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
