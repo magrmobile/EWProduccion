@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Enerwire Producción</string>
-    <string name="label_login">Inicio de Sesión</string>
+    <string name="label_login">LOGIN</string>
     <string name="label_user">Usuario</string>
     <string name="label_password">Password</string>
     <string name="btn_login">Ingresar</string>
@@ -53,4 +53,10 @@
     <string name="require_color_text">Es necesario seleccionar el Color</string>
     <string name="require_comment_text">Es necesario ingresar un Comentario</string>
     <string name="logo_image_description">Logo</string>
+
+    <string name="menu_appbar_search_title">Buscar</string>
+    <string name="menu_appbar_profile_title">Mi Perfil</string>
+    <string name="menu_appbar_settings_title">Configuración</string>
+    <string name="menu_appbar_help_title">Ayuda</string>
+    <string name="menu_appbar_logout_title">Cerrar Sesión</string>
 </resources>

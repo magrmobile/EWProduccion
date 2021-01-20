@@ -1,7 +1,6 @@
 package gcubeit.com.ewproduccion.ui
 
 import android.graphics.Color
-import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,10 +36,8 @@ class StopAdapter
                 tvColor.visibility = View.GONE
             }
 
-            tvStopDateStart.text = context.getString(R.string.item_stop_date_start, stop.stopDateStart)
-            tvStopTimeStart.text = context.getString(R.string.item_stop_time_start, stop.stopTimeStart)
-            tvStopDateEnd.text = context.getString(R.string.item_stop_date_end, stop.stopDateEnd)
-            tvStopTimeEnd.text = context.getString(R.string.item_stop_time_end, stop.stopTimeEnd)
+            tvStopDateStart.text = context.getString(R.string.item_stop_date_start, stop.stopDateTimeStart)
+            tvStopDateEnd.text = context.getString(R.string.item_stop_date_end, stop.stopDateTimeEnd)
         }
     }
 

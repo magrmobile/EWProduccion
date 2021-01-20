@@ -1,8 +1,6 @@
 package gcubeit.com.ewproduccion.ui
 
-import android.content.Context
 import android.content.Intent
-import android.net.wifi.WifiManager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
@@ -38,14 +36,13 @@ class MainActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             // validates
-            //toast(getMacAddress(this).toString())
             performLogin()
         }
     }
 
     private fun performLogin() {
-        val username = etUsername.editText?.text.toString()
-        val password = etPassword.editText?.text.toString()
+        val username = etUsername.text.toString()
+        val password = etPassword.text.toString()
 
         if(username.trim().isEmpty() || password.trim().isEmpty()) {
             toast(getString(R.string.error_empty_credentials))
@@ -67,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     if (loginResponse.success) {
                         createSessionPreference(loginResponse.jwt)
+                        createLastStopDateTimeStartPreference(loginResponse.lastStopDateTimeStart)
                         toast(getString(R.string.welcome_name, loginResponse.user.name))
                         //toast(loginResponse.lastLoginTime)
                         goToMenuActivity()
@@ -85,6 +83,11 @@ class MainActivity : AppCompatActivity() {
         preferences["jwt"] = jwt
     }
 
+    private fun createLastStopDateTimeStartPreference(datetime: String) {
+        val preferences = PreferenceHelper.defaultPrefs(this)
+        preferences["lastStopDateTimeStart"] = datetime
+    }
+
     private fun goToMenuActivity() {
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
@@ -96,11 +99,5 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         else
             snackBar.show()
-    }
-
-    private fun getMacAddress(context: Context): String? {
-        val wimanager = context.getSystemService(WIFI_SERVICE) as WifiManager
-        var macAddress = wimanager.connectionInfo.macAddress
-        return macAddress
     }
 }

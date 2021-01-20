@@ -42,6 +42,10 @@ class CreateStopActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_stop)
 
+        //setSupportActionBar(findViewById(R.id.create_stop_toolbar))
+
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         btnNext.setOnClickListener {
             when (spinnerCode.selectedItem) {
                 null -> {
@@ -359,11 +363,25 @@ class CreateStopActivity : AppCompatActivity() {
         tvConfirmCode.text = spinnerCode.selectedItem.toString()
         tvConfirmStopType.text = etStopType.text.toString()
         tvConfirmMachine.text = spinnerMachine?.selectedItem.toString()
-        tvConfirmProduct.text = spinnerProduct?.selectedItem.toString()
-        tvConfirmColor.text = spinnerColor?.selectedItem.toString()
+        if(spinnerProduct.selectedItem != null) {
+            tvConfirmProduct.text = spinnerProduct?.selectedItem.toString()
+            layout_product.visibility = View.VISIBLE
+        } else {
+            tvConfirmProduct.text = ""
+            layout_product.visibility = View.GONE
+        }
+
+        if(spinnerColor.selectedItem != null) {
+            tvConfirmColor.text = spinnerColor?.selectedItem.toString()
+            layout_color.visibility = View.VISIBLE
+        } else {
+            tvConfirmColor.text = ""
+            layout_color.visibility = View.GONE
+        }
+
         tvConfirmMeters.text = etMeters?.text.toString()
         tvConfirmComments.text = etComments?.text.toString()
-        tvConfirmStartDateTimeStop.text = ""
+        tvConfirmStartDateTimeStop.text = preferences["lastStopDateTimeStart", ""]
         val currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(Date())
         tvConfirmEndDateTimeStop.text = currentDateTimeString
     }

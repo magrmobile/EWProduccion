@@ -33,11 +33,8 @@ data class Stop (
     val id: Int,
     val meters: Int,
     val comment: String,
-    @SerializedName("stop_date_start") val stopDateStart: String,
-    @SerializedName("stop_time_start_12") val stopTimeStart: String,
-    @SerializedName("stop_date_end") val stopDateEnd: String,
-    @SerializedName("stop_time_end_12") val stopTimeEnd: String,
-
+    @SerializedName("stop_datetime_start_12") val stopDateTimeStart: String,
+    @SerializedName("stop_datetime_end_12") val stopDateTimeEnd: String,
     val code: Code,
     val machine: Machine,
     val product: Product,

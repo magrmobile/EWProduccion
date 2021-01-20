@@ -22,7 +22,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_below="@id/header"
-        android:padding="15dp"
         android:layout_marginTop="40dp"
         android:gravity="center_horizontal">
 
@@ -30,13 +29,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true"
-            app:counterEnabled="true"
-            android:id="@+id/etUsername">
+            app:counterEnabled="false"
+            app:startIconDrawable="@drawable/ic_user"
+            android:padding="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/label_user"
-                android:inputType="text"/>
+                android:singleLine="false"
+                android:inputType="text"
+                />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -45,25 +49,29 @@
             android:layout_height="wrap_content"
             app:errorEnabled="true"
             app:passwordToggleEnabled="true"
-            android:id="@+id/etPassword">
+            app:startIconDrawable="@drawable/ic_lock"
+            android:padding="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/label_password"
-                android:inputType="textPassword"
-                android:layout_marginTop="30dp"/>
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/label_login"
+            android:textStyle="bold"
             android:textColor="@color/white"
-            android:background="@color/color2"
-            android:layout_marginTop="30dp"
-            style="@style/MenuButton"/>
+            style="@style/MyButton"/>
 
     </LinearLayout>
 
@@ -74,5 +82,4 @@
         android:layout_marginTop="50dp"
         android:background="@drawable/logo_title"
         android:contentDescription="@string/logo_image_description" />
-
 </RelativeLayout>

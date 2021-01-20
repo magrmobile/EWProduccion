@@ -173,7 +173,8 @@
         <EditText
             android:id="@+id/etComments"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -183,7 +184,7 @@
             android:layout_below="@+id/commentsLayout">
         <Button
             android:id="@+id/btnNext"
-            style="@style/MenuButton"
+            style="@style/MyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"

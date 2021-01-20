@@ -8,7 +8,7 @@
     android:background="@drawable/bg_gradient"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp"
+    android:padding="32dp"
     tools:context=".ui.MenuActivity">
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        style="@style/MenuButton"
+        style="@style/MyButton"
         app:icon="@drawable/ic_add_circle"
         android:text="@string/btn_create_appointment"/>
     <Button
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:icon="@drawable/ic_schedule"
-        style="@style/MenuButton"
+        style="@style/MyButton"
         android:text="@string/btn_my_appointments"/>
     <Button
         android:id="@+id/btnLogout"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         app:icon="@drawable/ic_power_off"
-        style="@style/MenuButton"
+        style="@style/MyButton"
         android:text="@string/btn_logout"/>
 
 </LinearLayout>

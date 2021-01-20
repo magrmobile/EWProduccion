@@ -6,6 +6,5 @@ data class LoginResponse (
     val success: Boolean,
     val user: User,
     val jwt: String,
-    val lastLoginDate: String,
-    val lastLoginTime: String
+    val lastStopDateTimeStart: String
 )
